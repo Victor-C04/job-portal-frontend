@@ -44,9 +44,9 @@ export function JobCard({ job }) {
 
       <Stack spacing="xs">
         <Group className="job-details" spacing="xs">
-          <Text size="sm"><i class="bi bi-person-plus-fill"></i> Fre / Exp</Text>
-          <Text size="sm"><i class="bi bi-buildings-fill"></i> {job.jobType}</Text>
-          <Text size="sm"><i class="bi bi-currency-dollar"></i> {job.salaryMin} - {job.salaryMax} LPA</Text>
+          <Text size="sm"><i className="bi bi-person-plus-fill"></i> Fre / Exp</Text>
+          <Text size="sm"><i className="bi bi-buildings-fill"></i> {job.jobType}</Text>
+          <Text size="sm"><i className="bi bi-currency-dollar"></i> {job.salaryMin} - {job.salaryMax} LPA</Text>
         </Group>
         
         <Stack spacing={5} mt={5} className="job-description">

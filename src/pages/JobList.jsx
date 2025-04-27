@@ -73,10 +73,41 @@ export function JobList() {
       salaryMin: 6,
       salaryMax: 12,
       applicationDeadline: new Date().toISOString(),
-    }
+    },
+    {
+      _id: '2',
+      jobTitle: 'Frontend Developer',
+      companyName: 'Google',
+      location: 'Bangalore',
+      jobType: 'Onsite',
+      salaryMin: 8,
+      salaryMax: 14,
+      applicationDeadline: new Date().toISOString(),
+    },
+    {
+      _id: '3',
+      jobTitle: 'Backend Developer',
+      companyName: 'Microsoft',
+      location: 'Hyderabad',
+      jobType: 'Hybrid',
+      salaryMin: 10,
+      salaryMax: 16,
+      applicationDeadline: new Date().toISOString(),
+    },
+    {
+      _id: '4',
+      jobTitle: 'Software Engineer Intern',
+      companyName: 'Netflix',
+      location: 'Remote',
+      jobType: 'Internship',
+      salaryMin: 2,
+      salaryMax: 4,
+      applicationDeadline: new Date().toISOString(),
+    },
   ];
+  
 
-  const displayJobs = jobs.length > 0 ? filteredJobs : dummyJobs;
+  const displayJobs = [...dummyJobs, ...filteredJobs];
 
   
   

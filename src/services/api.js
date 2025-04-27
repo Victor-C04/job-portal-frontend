@@ -8,6 +8,7 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
+  withCredentials: true // Important for CORS with credentials
 });
 
 // Jobs API
@@ -23,6 +24,16 @@ api.interceptors.request.use(
     return config;
   },
   error => {
+    return Promise.reject(error);
+  }
+);
+
+api.interceptors.response.use(
+  response => {
+    return response;
+  },
+  error => {
+    console.error('API Error:', error);
     return Promise.reject(error);
   }
 );
