@@ -143,19 +143,22 @@ export function CreateJob({ onClose, onSuccess }) {
             <div className="salary-range-wrapper">
   <label className="title block font-medium mb-2">Salary Range (in LPA)</label>
   <ReactSlider
-    className="horizontal-slider"
-    thumbClassName="thumb"
-    trackClassName="track"
-    min={1}
-    max={30}
-    step={1}
-    value={[watch('salaryMin') || 3, watch('salaryMax') || 8]}
-    onChange={([min, max]) => {
-      setValue('salaryMin', min);
-      setValue('salaryMax', max);
-    }}
-    minDistance={1}
-  />
+  className="horizontal-slider"
+  thumbClassName="thumb"
+  trackClassName="track"
+  min={1}
+  max={30}
+  step={1}
+  value={[
+    Number(watch('salaryMin') || 3),
+    Number(watch('salaryMax') || 8),
+  ]}
+  onChange={([min, max]) => {
+    setValue('salaryMin', min);
+    setValue('salaryMax', max);
+  }}
+  minDistance={1}
+/>
   <div className="sal-box flex justify-between text-sm mt-2 text-gray-600">
     <span>{watch('salaryMin') || 3} - </span>
     <span>{watch('salaryMax') || 8} LPA</span>

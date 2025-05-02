@@ -4,6 +4,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { Link } from 'react-router-dom';
 import Modal from '../components/Modal'; // adjust path as needed
 import CreateJob from '../pages/CreateJob'; // adjust path if different
+import './header.css'
 
 
 const links = [
@@ -35,10 +36,7 @@ export function HeaderResponsive() {
     <div className="header-container" style={{ height: 60, marginBottom: 20 }}>
       <Container className="header-inner">
         <Group position="apart" className='header-inner'>
-          <svg className="header-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#6C5CE7"/>
-            <path d="M2 17L12 22L22 17V7L12 12L2 7V17Z" fill="#8B7CFF"/>
-          </svg>
+          <img className='logo' src="https://media.licdn.com/dms/image/v2/D560BAQHpPblOaplcOQ/company-logo_200_200/company-logo_200_200/0/1694017343509/cybermind_works_logo?e=2147483647&v=beta&t=N13ljMg1CHgxKadTUGz5b35KPUjx9qKRVed2giPMM00" alt="" />
           <Group spacing={5} className="header-links">
             {items}
           </Group>

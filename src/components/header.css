@@ -1,0 +1,19 @@
+/* hide desktop links on small screens */
+@media (max-width: 768px) {
+  .desktop-links {
+    display: none;
+  }
+}
+
+/* always show desktop links on large screens */
+@media (min-width: 769px) {
+  .mobile-links {
+    display: none;
+  }
+}
+
+.logo{
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-right: 1rem;
+}
