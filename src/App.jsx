@@ -8,6 +8,8 @@ import AboutUs from './pages/AboutUs';
 import Testimonials from './pages/Testimonials';
 import './App.css';
 import { Toaster } from 'react-hot-toast';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function App() {

@@ -17,6 +17,7 @@
     "@mantine/hooks": "^7.17.4",
     "@tabler/icons-react": "^3.31.0",
     "axios": "^1.8.4",
+    "bootstrap": "^5.3.5",
     "bootstrap-icons": "^1.11.3",
     "dayjs": "^1.11.13",
     "lucide-react": "^0.501.0",

@@ -13,7 +13,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #f8f9fa;
+  background-color: #f5f7fa;
   box-sizing: border-box;
 }
 
@@ -192,11 +192,19 @@ body {
 
 .filter-container {
   background-color: #fff;
+  justify-content: center;
+  align-items: center;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   width: 100%;
+}
+
+.filter{
+  justify-content: center;
+  align-items: center;
+  justify-items: center
 }
 
 .apply{
@@ -221,9 +229,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: white;
-  padding: 20px 20px;
+  padding: 20px;
   border-radius: 20px;
-  width: 100%;
   max-width: 600px;
 }
 
@@ -235,6 +242,10 @@ body {
 .application {
   width: 100%;
   max-width: 100%;
+}
+
+.application{
+  margin-left: 1rem;
 }
 
 .first,
@@ -259,7 +270,6 @@ body {
 
 .o-input{
   width: 100%;
-  height: 30px;
   cursor: pointer;
   border-color: lightgrey;
   border-radius: 5px;
@@ -275,6 +285,10 @@ body {
   resize: vertical;
 }
 
+.sal-text{
+  color: #555;
+}
+
 .inp{
   margin-top: 3px;
   border-color: lightgray;
@@ -282,6 +296,7 @@ body {
   outline: none;
   border: 1px solid lightgray;
   width: 100%;
+  color: #555;
 }
 
 .inp-e{
@@ -307,9 +322,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   flex-wrap: wrap;
   gap: 15px;
+  border-radius: 1rem;
 }
 
 .search-job,
@@ -325,15 +343,17 @@ body {
 .search-job,
 .salary-range{
   margin: 0;
+  width: 14rem;
 }
 
 .input-box{
-  padding: 5px 10px;
+  padding: 10px;
   border: none;
   cursor: pointer;
   width: 12rem;
-  height: 35px;
+  height: 2.5rem;
   border-radius: 10px;
+  color: #555;
 }
 
 .job-title{
@@ -349,6 +369,12 @@ body {
 .find{
   margin: 0 0 15px 10px;
   color: #5a4bd1;
+}
+
+.h2-container{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
 }
 
 .range{
@@ -382,7 +408,6 @@ body {
 .draft{
   padding: 5px;
   min-width: 100px;
-  height: 35px;
   border-radius: 8px;
   flex: 1;
 }
@@ -433,9 +458,6 @@ body {
     display: none;
   }
   
-  .header-burger {
-    display: block;
-  }
   
   .job-list-container {
     flex-direction: column;
@@ -447,16 +469,12 @@ body {
     align-items: stretch;
   }
   
-  .search-job, .job-type, .location-home {
-    width: 100%;
-  }
   
   .job-grid {
     grid-template-columns: 1fr;
   }
   
   .job-card {
-    max-width: 100%;
     margin: 10px 0;
   }
 }
@@ -466,13 +484,7 @@ body {
   .search-job,
   .job-type,
   .location-home {
-    flex-direction: column;
     align-items: stretch;
-    width: 100%;
-  }
-
-  .input-box {
-    width: 100%;
   }
   
   .job-opening {

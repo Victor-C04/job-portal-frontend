@@ -10,11 +10,12 @@
   
   .thumb {
     height: 10px;
-    width: 10px;
-    background-color: #2563eb;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-top: -5px;
+  width: 10px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  cursor: grab;
+  top: 50%;
+  transform: translateY(-50%);
   }
   
   .track {
@@ -31,4 +32,5 @@
     font-size: small;
     color: gray;
   }
+
   

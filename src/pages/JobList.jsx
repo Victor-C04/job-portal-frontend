@@ -3,6 +3,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Search, MapPin, Briefcase } from 'lucide-react';
 import ReactSlider from 'react-slider';
 import './SalarySlider.css';
+import '../index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
   Container,
@@ -71,7 +73,7 @@ export function JobList() {
     const fetchJobs = async () => {
       try {
         const response = await getJobs();
-        setJobs([...dummyJobs, ...response.data]);
+        setJobs([...response.data]);
       } catch (error) {
         console.error('Error fetching jobs:', error);
         setJobs(dummyJobs);
@@ -106,13 +108,14 @@ export function JobList() {
   const displayJobs = [...dummyJobs, ...filteredJobs];
 
   return (
-    <Container size="xl">
+    <Container className='h2-container' size="xl">
       <Title className="find text-xl sm:text-2xl md:text-3xl font-bold text-center" order={2} mb="lg">
         Find Your Dream Job
       </Title>
 
       {/* Filters */}
-      <div className="filter w-full flex flex-wrap md:flex-row gap-3 items-center bg-white p-2 rounded-lg shadow-sm">
+      <div className="w-full flex justify-center">
+      <div className="filter flex flex-wrap gap-3 justify-center items-end bg-white p-4 rounded-lg max-w-6xl w-full">
         {/* Job Title */}
         <div className="search-job relative w-full md:w-1/4">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -120,20 +123,20 @@ export function JobList() {
           </div>
           <input 
             type="text" 
-            className="job-title input-box w-full pl-10 pr-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-            placeholder="Search By Job Title, Role"
+            className="job-title input-box w-full pl-10 pr-3 py-2 border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+            placeholder="Search By Job Title"
             value={filters.jobTitle}
             onChange={(e) => handleFilterChange('jobTitle', e.target.value)}
           />
         </div>
 
         {/* Location */}
-        <div className="location-home relative w-full md:w-1/5">
+        <div className="location-home relative w-full md:w-1/4">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <MapPin className="icon-f w-4 h-4 text-gray-400" />
           </div>
           <select
-            className="input-box w-full pl-10 pr-3 py-2 border border-gray-200 rounded-md appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="input-box w-full pl-10 pr-3 py-2 rounded-md appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500"
             value={filters.location}
             onChange={(e) => handleFilterChange('location', e.target.value)}
           >
@@ -146,12 +149,12 @@ export function JobList() {
         </div>
 
         {/* Job Type */}
-        <div className="job-type relative w-full md:w-1/5">
+        <div className="job-type relative w-full md:w-1/4">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <Briefcase className="icon-f w-4 h-4 text-gray-400" />
           </div>
           <select
-            className="input-box w-full pl-10 pr-3 py-2 border border-gray-200 rounded-md appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="input-box w-full pl-10 pr-3 py-2  border-gray-200 rounded-md appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500"
             value={filters.jobType}
             onChange={(e) => handleFilterChange('jobType', e.target.value)}
           >
@@ -164,8 +167,8 @@ export function JobList() {
         </div>
 
         {/* Salary */}
-        <div className="salary-range w-full md:w-1/3 px-1">
-          <div className="flex justify-between mb-1">
+        <div className="salary-range w-full md:w-1/4 px-1">
+          <div className="flex sal-text justify-between mb-1">
             <span className="text-sm text-gray-600">Salary (in LPA)</span>
             <span className="text-sm text-gray-600">
               ₹{filters.salaryRange[0]}L - ₹{filters.salaryRange[1]}L
@@ -186,6 +189,8 @@ export function JobList() {
           />
         </div>
       </div>
+      </div>
+      
 
       {/* Jobs Grid */}
       {loading ? (

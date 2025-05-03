@@ -1,19 +1,43 @@
-/* hide desktop links on small screens */
-@media (max-width: 768px) {
-  .desktop-links {
-    display: none;
-  }
+.navbar-brand img {
+  border-radius: 50%;
 }
 
-/* always show desktop links on large screens */
-@media (min-width: 769px) {
-  .mobile-links {
-    display: none;
-  }
+.nav-link {
+  font-weight: 500;
 }
 
-.logo{
-    width: 2.3rem;
-    height: 2.3rem;
-    margin-right: 1rem;
+.nav-link.active {
+  color: #5e35b1 !important; /* purple */
 }
+
+.navbar{
+  border-radius: 1rem;
+  width: fit-content;
+}
+
+.navy{
+  align-items: center;
+  justify-items: center;
+}
+
+.btnn{
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  font-size: 24px;
+}
+
+.collapse {
+  display: none;
+}
+
+.collapse.show {
+  display: block;
+}
+
+
+
