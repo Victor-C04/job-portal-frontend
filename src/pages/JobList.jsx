@@ -114,8 +114,8 @@ export function JobList() {
       </Title>
 
       {/* Filters */}
-      <div className="w-full flex justify-center">
-      <div className="filter flex flex-wrap gap-3 justify-center items-end bg-white p-4 rounded-lg max-w-6xl w-full">
+      <div className="w-full flex justify-center px-4 sm:px-0">
+      <div className="filter flex flex-wrap gap-3 justify-center items-end bg-white p-4 rounded-lg max-w-6xl w-full flex-col sm:flex-row">
         {/* Job Title */}
         <div className="search-job relative w-full md:w-1/4">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
